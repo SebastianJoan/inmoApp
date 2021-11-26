@@ -7,7 +7,7 @@ import 'package:latlong2/latlong.dart';
 const MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1IjoiOTE0M2wwY29sIiwiYSI6ImNrdHM1ZWp6NzFkMWwyeW11bWZ5bnczeXMifQ.j_3Gw4SuKkW9nk-uTTf2dg';
 const MAPBOX_STYLE = 'mapbox/dark-v10';
-const MARKER_COLOR = Color.fromRGBO(203, 67, 53, 1.0);
+const MARKER_COLOR = Color.fromRGBO(27, 175, 138, 1);
 
 const MARKER_SIZE_EXPANDED = 55.0;
 const MARKER_SIZE_SHRINKED = 38.0;
@@ -16,7 +16,6 @@ final _myLocation = LatLng(7.067670, -73.833149);
 
 class GeoLocationMap extends StatelessWidget {
   const GeoLocationMap({Key? key}) : super(key: key);
-  
 
   List<Marker> _buildMarkers() {
     final _markerList = <Marker>[];
@@ -29,10 +28,10 @@ class GeoLocationMap extends StatelessWidget {
           point: mapItem.location,
           builder: (_) {
             return GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: const Icon(
                 CupertinoIcons.house_fill,
-                color: Color.fromRGBO(27, 175, 138, 1),
+                color: MARKER_COLOR
               ),
             );
           },
@@ -101,10 +100,10 @@ class _MyLocationMarker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 50,
-      decoration: BoxDecoration(color: MARKER_COLOR, shape: BoxShape.circle),
+    return const Icon(
+      CupertinoIcons.house_alt_fill,
+      color: MARKER_COLOR,
+      size: 30,
     );
   }
 }

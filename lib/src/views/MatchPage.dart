@@ -272,7 +272,7 @@ class _MatchPageState extends State<MatchPage> {
                             color: Color.fromRGBO(57, 63, 70, 1),
                           ),
                           child: IconButton(
-                            onPressed: (){},
+                            onPressed: () => Navigator.pushNamed(context, 'MapePageView'),
                             icon: const Icon(
                               CupertinoIcons.location_solid,
                               color: Colors.yellow,

@@ -39,10 +39,10 @@ class _InfoMatchPageState extends State<InfoMatchPage> {
                           height: size.height*0.60  ,
                           decoration: const BoxDecoration(
                             color: Colors.transparent,
-                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15))
+                            borderRadius: BorderRadius.only(topLeft:Radius.circular(15),topRight: Radius.circular(15),bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15))
                           ),
                           child: const ClipRRect(
-                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15)),
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15),bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15)),
                             child: Image(
                               image: AssetImage('assets/img/casaejemplo1.jpg'),
                               fit: BoxFit.cover,
@@ -775,27 +775,6 @@ class _InfoMatchPageState extends State<InfoMatchPage> {
                                     icon: const Icon(
                                       CupertinoIcons.chat_bubble_2_fill,
                                       color: Colors.white,
-                                      size: 30,
-                                    )
-                                  ),
-                                ),
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10,right:20),
-                              child: ClipRRect(
-                                child: Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration:const BoxDecoration(
-                                    color: Color.fromRGBO(57, 63, 70, 1),
-                                  ),
-                                  child: IconButton(
-                                    onPressed: (){},
-                                    icon: const Icon(
-                                      CupertinoIcons.location_solid,
-                                      color: Colors.yellow,
                                       size: 30,
                                     )
                                   ),
