@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:inmo/src/views/mainpage.dart';
+import 'package:inmo/src/views/InfoMatchPage.dart';
+import 'package:inmo/src/views/MatchPage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,9 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'InmoApp',
-        initialRoute: 'MainPage',
+        initialRoute: 'MatcPage',
         routes: {
-          'MainPage': (BuildContext context) => const MainPage(),
+          'MatcPage': (BuildContext context) => const MatchPage(),
+          'InfoMatchPage': (BuildContext context) => const InfoMatchPage(),
         },
     );
   }

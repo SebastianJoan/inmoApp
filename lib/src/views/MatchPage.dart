@@ -1,15 +1,19 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+class MatchPage extends StatefulWidget {
+  const MatchPage({Key? key}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<MatchPage> createState() => _MatchPageState();
   
 }
 
-class _MainPageState extends State<MainPage> {
+class _MatchPageState extends State<MatchPage> {
 
 
   @override
@@ -97,43 +101,94 @@ class _MainPageState extends State<MainPage> {
                 ),
                 child: Column(
                   children: [
-                    Container(
-                      width: size.width*0.90,
-                      height: size.height*0.40,
-                      decoration: const BoxDecoration(
-                        color: Colors.transparent,
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
-                      ),
-                      child: const ClipRRect(
-                        borderRadius: BorderRadius.only(topLeft:Radius.circular(15),topRight: Radius.circular(15)),
-                        child: Image(
-                          image: AssetImage('assets/img/casaejemplo1.jpg'),
-                          fit: BoxFit.cover,
+                    Stack(
+                      children: [
+                        Container(
+                          width: size.width*0.90,
+                          height: size.height*0.40,
+                          decoration: const BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
+                          ),
+                          child: const ClipRRect(
+                            borderRadius: BorderRadius.only(topLeft:Radius.circular(15),topRight: Radius.circular(15)),
+                            child: Image(
+                              image: AssetImage('assets/img/casaejemplo1.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10,top:10),
+                          child: ClipRRect(
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              decoration:const BoxDecoration(
+                                color: Color.fromRGBO(57, 63, 70, 1),
+                              ),
+                              child: IconButton(
+                                onPressed: () => Navigator.pushNamed(context, 'InfoMatchPage'),
+                                icon: const Icon(
+                                  CupertinoIcons.info_circle,
+                                  color: Colors.white,
+                                  size: 30,
+                                )
+                              ),
+                            ),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                        ),
+                      ], 
                     ),
                     Container(
                       width: size.width*0.91,
-                      height: size.height*0.10,
+                      height: size.height*0.07,
                       decoration: const BoxDecoration(
-                        color: Colors.blue,
+                        color: Color.fromRGBO(57, 63, 70, 1),
                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15))
                       ),
-                      child: Column(
-                        children: const [
-                          Text(
-                            'inmueble de CENTURY 21 MAXIBIENES',
-                            style: TextStyle(
-                              color: Colors.white
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children:  [
+                            Row(
+                              children: const [
+                                Text(
+                                  'Propiedad: ',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Inmueble de Century 21 Maxibines',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          Text(
-                            '310 m²',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),
-                          ),
-                        ],
+                            Row(
+                              children: const [
+                                Text(
+                                  'Metros Cuadrados: ',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '310 m²',
+                                  style: TextStyle(
+                                    color: Colors.white
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -170,7 +225,7 @@ class _MainPageState extends State<MainPage> {
                       borderRadius: BorderRadius.circular(100),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20,right:20),
+                      padding: const EdgeInsets.only(left: 20,right:10),
                       child: ClipRRect(
                         child: Container(
                           width: 60,
@@ -183,6 +238,27 @@ class _MainPageState extends State<MainPage> {
                             icon: const Icon(
                               CupertinoIcons.chat_bubble_2_fill,
                               color: Colors.white,
+                              size: 30,
+                            )
+                          ),
+                        ),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10,right:20),
+                      child: ClipRRect(
+                        child: Container(
+                          width: 60,
+                          height: 60,
+                          decoration:const BoxDecoration(
+                            color: Color.fromRGBO(57, 63, 70, 1),
+                          ),
+                          child: IconButton(
+                            onPressed: (){},
+                            icon: const Icon(
+                              CupertinoIcons.location_solid,
+                              color: Colors.yellow,
                               size: 30,
                             )
                           ),
