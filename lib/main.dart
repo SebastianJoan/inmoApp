@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'InmoApp',
-        initialRoute: 'MatcPage',
+        initialRoute: 'MatchPage',
         routes: {
-          'MatcPage': (BuildContext context) => const MatchPage(),
+          'MatchPage': (BuildContext context) => const MatchPage(),
           'InfoMatchPage': (BuildContext context) => const InfoMatchPage(),
         },
     );

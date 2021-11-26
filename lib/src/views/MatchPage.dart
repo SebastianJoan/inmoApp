@@ -143,7 +143,7 @@ class _MatchPageState extends State<MatchPage> {
                     ),
                     Container(
                       width: size.width*0.91,
-                      height: size.height*0.07,
+                      height: size.height*0.09,
                       decoration: const BoxDecoration(
                         color: Color.fromRGBO(57, 63, 70, 1),
                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15),bottomRight: Radius.circular(15))
@@ -163,7 +163,7 @@ class _MatchPageState extends State<MatchPage> {
                                   ),
                                 ),
                                 Text(
-                                  'Inmueble de Century 21 Maxibines',
+                                  'Casa en Venta, Niza',
                                   style: TextStyle(
                                     color: Colors.white,
                                   ),
@@ -181,6 +181,23 @@ class _MatchPageState extends State<MatchPage> {
                                 ),
                                 Text(
                                   '310 m²',
+                                  style: TextStyle(
+                                    color: Colors.white
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: const [
+                                Text(
+                                  'Precio: ',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '\$940.000.000 Pesos',
                                   style: TextStyle(
                                     color: Colors.white
                                   ),
