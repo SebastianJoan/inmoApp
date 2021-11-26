@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inmo/src/views/InfoMatchPage.dart';
 import 'package:inmo/src/views/MatchPage.dart';
+import 'package:inmo/src/views/mapview.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         routes: {
           'MatchPage': (BuildContext context) => const MatchPage(),
           'InfoMatchPage': (BuildContext context) => const InfoMatchPage(),
+          'MapePageView': (BuildContext context) => const MapePageView(),
         },
     );
   }

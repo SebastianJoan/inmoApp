@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:inmo/src/widgets/map.dart';
 
 class InfoMatchPage extends StatefulWidget {
   const InfoMatchPage({Key? key}) : super(key: key);
@@ -715,8 +716,15 @@ class _InfoMatchPageState extends State<InfoMatchPage> {
                                 width: double.infinity,
                                 height: size.height*0.25,
                                 decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: Colors.transparent,
                                   borderRadius: BorderRadius.circular(15)
+                                ),
+                                child: GestureDetector(
+                                  onDoubleTap: () => Navigator.pushNamed(context, 'MapePageView'),
+                                  child: ClipRRect(
+                                    child: const GeoLocationMap(),
+                                    borderRadius:BorderRadius.circular(15)
+                                  ),
                                 ),
                               ),
                             ),
