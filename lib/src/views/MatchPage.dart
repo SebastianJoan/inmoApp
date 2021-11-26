@@ -101,45 +101,23 @@ class _MatchPageState extends State<MatchPage> {
                 ),
                 child: Column(
                   children: [
-                    Stack(
-                      children: [
-                        Container(
-                          width: size.width*0.90,
-                          height: size.height*0.40,
-                          decoration: const BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
-                          ),
-                          child: const ClipRRect(
-                            borderRadius: BorderRadius.only(topLeft:Radius.circular(15),topRight: Radius.circular(15)),
-                            child: Image(
-                              image: AssetImage('assets/img/casaejemplo1.jpg'),
-                              fit: BoxFit.cover,
-                            ),
+                    GestureDetector(
+                      onDoubleTap: ()=> Navigator.pushNamed(context, 'InfoMatchPage'),
+                      child: Container(
+                        width: size.width*0.90,
+                        height: size.height*0.40,
+                        decoration: const BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
+                        ),
+                        child: const ClipRRect(
+                          borderRadius: BorderRadius.only(topLeft:Radius.circular(15),topRight: Radius.circular(15)),
+                          child: Image(
+                            image: AssetImage('assets/img/casaejemplo1.jpg'),
+                            fit: BoxFit.cover,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10,top:10),
-                          child: ClipRRect(
-                            child: Container(
-                              width: 60,
-                              height: 60,
-                              decoration:const BoxDecoration(
-                                color: Color.fromRGBO(57, 63, 70, 1),
-                              ),
-                              child: IconButton(
-                                onPressed: () => Navigator.pushNamed(context, 'InfoMatchPage'),
-                                icon: const Icon(
-                                  CupertinoIcons.info_circle,
-                                  color: Colors.white,
-                                  size: 30,
-                                )
-                              ),
-                            ),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                        ),
-                      ], 
+                      ),
                     ),
                     Container(
                       width: size.width*0.91,
