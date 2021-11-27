@@ -20,13 +20,24 @@ class _MatchPageState extends State<MatchPage> {
       child: PageView(
         children: [
           _matchView(context, size),
+          _configView(context, size),
         ],
       ),
     );
   }
 }
 
-Widget _matchView(BuildContext context, Size  size) {
+Widget _configView(BuildContext context, Size size) {
+  return Scaffold(
+    backgroundColor: const Color.fromRGBO(35, 40, 50, 1.0),
+    body: Container(
+      width: double.infinity,
+      height: size.height*0.15,
+    ),
+  );
+}
+
+Widget _matchView(BuildContext context, Size size) {
   return Scaffold(
     backgroundColor: const Color.fromRGBO(35, 40, 50, 1.0),
     body: Column(
