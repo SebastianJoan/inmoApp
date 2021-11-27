@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:inmo/src/widgets/json.dart';
+import 'package:inmo/src/data/properties.dart';
 import 'package:latlong2/latlong.dart';
 
 const MAPBOX_ACCESS_TOKEN =
@@ -21,8 +21,8 @@ class GeoLocationMap extends StatelessWidget {
 
   List<Marker> _buildMarkers() {
     final _markerList = <Marker>[];
-    for (int i = 0; i < mapMarker.length; i++) {
-      final mapItem = mapMarker[i];
+    for (int i = 0; i < dumyProperties.length; i++) {
+      final mapItem = dumyProperties[i];
       _markerList.add(
         Marker(
           height: 40,
